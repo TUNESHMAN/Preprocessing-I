@@ -208,3 +208,28 @@ nav a:hover{
   margin-top: 20px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 } 
+
+.section1{
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  width: 80%;
+  justify-content: space-between;
+}
+
+h2{
+  font-size: 25px;
+  font-weight: bolder;
+}
+
+.listen{
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: 20px;
+}
+.stuff{
+  line-height: 1.5;
+  font-size: 20px;
+}
