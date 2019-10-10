@@ -219,14 +219,26 @@ nav{
   display: @direction;
   flex-direction: @orientation;
   justify-content: flex-end;
+
+  @media (max-width:@mobile) {
+	 display: @direction;
+	  justify-content: space-around;
+	  }
+	
+	}
   a{
 	flex-basis: 10%;
 	justify-content: @gap;
 	text-decoration: none;
 	font-size: @size;
 	color: grey;
-  }
+
+	@media(max-width:@mobile){
+	 font-size: 17px;
+	}
 }
+  
+
 
 nav a:hover{
   cursor: pointer;
@@ -249,7 +261,16 @@ nav a:hover{
   margin-left: @size60;
   margin-top: @size;
 
-}
+  @media (max-width:@mobile){
+	
+	  margin-left: 19px;
+	  width: 600px;
+  
+	}
+  
+  }
+
+
 
 .pics{
   max-width: 200px;
@@ -369,25 +390,11 @@ td{
 
 // MOBILE VERSION
 
-@media(max-width:@mobile){
-	nav{
-	  display: @direction;
-	  justify-content: space-around;
-	  }
-	nav a{
-	  font-size: 17px;
+
+
 	
-	}
-  }
   
-  @media (max-width:@mobile){
-	.background{
-	  margin-left: 19px;
-	  width: 600px;
   
-	}
-  
-  }
   
   @media(max-width:@mobile){
 	.pics{
@@ -454,7 +461,7 @@ td{
 	.section2{
 	  display: @direction;
 	  justify-content: space-between;
-	  flex-direction: row;
+	  flex-direction: @orientation;
 	  margin-top: 70px;
 	  margin-left: @size40;
 	  }
