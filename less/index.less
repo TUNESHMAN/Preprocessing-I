@@ -221,6 +221,11 @@ body {
 	color: @colour;
 }
 
+.free{
+	display: @direction;
+	flex-direction: @orientation ;
+}
+
 
 nav{
   display: @direction;
@@ -333,8 +338,7 @@ nav a:hover{
 } 
 
 .section1{
-  display: @direction;
-  flex-direction: @orientation;
+  .free();
   margin-top: 150px;
   width: @cent8;
   justify-content: @gap;
