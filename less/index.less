@@ -213,6 +213,13 @@ body {
 @size40: 40px;
 @size15: 15px;
 @orientation: row;
+@colour: blue;
+
+// MIXINS
+.anchor{
+	font-size: @size;
+	color: @colour;
+}
 
 
 nav{
@@ -230,8 +237,7 @@ nav{
 	flex-basis: 10%;
 	justify-content: @gap;
 	text-decoration: none;
-	font-size: @size;
-	color: grey;
+	.anchor();
 
 	@media(max-width:@mobile){
 	 font-size: 17px;
