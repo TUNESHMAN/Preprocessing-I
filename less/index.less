@@ -262,28 +262,38 @@ nav a:hover{
   margin-top: @size;
 
   @media (max-width:@mobile){
-	
-	  margin-left: 19px;
+	 margin-left: 19px;
 	  width: 600px;
-  
 	}
   
   }
-
-
 
 .pics{
   max-width: 200px;
   margin-left: 90px;
   margin-top: @size80;
-}
+
+  @media(max-width:@mobile){
+	  margin-left: 140px;
+	  margin-top: @size40;
+	}
+  
+  }
+
 
 .Babatunde{
   font-size: @size30;
   font-weight: @more;
   text-align: @location;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
+
+  @media(max-width:@mobile){
+	  font-size: 20px;
+	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	  margin-top: @size10;
+	}
+  
+  }
 
 .jam{
   font-size: @size;
@@ -301,7 +311,12 @@ nav a:hover{
   font-weight: @small;
   font-size: @size;
   margin-top: @size;
-}
+
+  @media(max-width:@mobile){
+	  margin-right: 50px;
+	}
+  
+  }
 
 
 .description{
@@ -317,7 +332,17 @@ nav a:hover{
   margin-top: 150px;
   width: @cent8;
   justify-content: @gap;
-}
+
+  @media(max-width:@mobile){
+	  display: @direction;
+	  justify-content: space-between;
+	  flex-direction: @orientation;
+	  margin-top: 120px;
+	  margin-left: @size40;
+	
+	}
+  }
+
 
 h2{
   font-size: 25px;
@@ -330,7 +355,19 @@ h2{
   margin: 0 auto;
   line-height: 1.5;
   font-size: @size;
-}
+
+  @media(max-width:@mobile){
+	
+	 display: @direction;
+	 flex-direction: column;
+	 margin: 0 auto;
+	 line-height: 1.5;
+	 font-size: 20px;
+	 margin-right: 35px;
+	}
+  
+  }
+
 .stuff{
   line-height: 1.5;
   font-size: @size;
@@ -340,8 +377,20 @@ table{
   text-align: @location;
   margin-top: @size15;
   justify-content: @location;
+
+  @media(max-width:@mobile){
+	
+	  text-align: @location;
+	  margin-top: @size80;
+	  justify-content: @location;
+	  margin-left: -110px;
+	  display: @direction;
+	  flex-wrap: wrap;
+	  
+	}
+  
+  }
  
-}
 
 th{
   font-size: @size;
@@ -353,21 +402,45 @@ th{
   padding-bottom: @size10;
   background:@bg-color;
 
-}
+  @media(max-width:@mobile){
+
+	  font-size: @size15;
+  
+	}
+  
+  }
 
 .section2{
   
   margin-top: @size100;
   margin-left: @size60;
   margin-right: @size30;
-}
+
+  @media (max-width:@mobile){
+	  display: @direction;
+	  justify-content: space-between;
+	  flex-direction: @orientation;
+	  margin-top: 70px;
+	  margin-left: @size40;
+	  }
+  
+  }
+
 
 .table-row{
   border: @size1 solid black;
   width: @cent;
  padding-left: 700px;
  align-content: @gap;
-}
+
+ @media(max-width:@mobile){
+	  border: 1px solid black;
+	 width: @size40;
+  
+	}
+  
+  }
+
 
 td{
   font-size: @size;
@@ -386,32 +459,6 @@ td{
   
 }
 
-
-
-// MOBILE VERSION
-
-
-
-	
-  
-  
-  
-  @media(max-width:@mobile){
-	.pics{
-	  margin-left: 140px;
-	  margin-top: @size40;
-	}
-  
-  }
-  
-  @media(max-width:@mobile){
-	.Babatunde{
-	  font-size: 20px;
-	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-	  margin-top: @size10;
-	}
-  
-  }
   @media(max-width: @mobile){
 	span{
 	  display: none;
@@ -427,75 +474,18 @@ td{
   
   }
   
-  @media(max-width:@mobile){
-	.btn{
-	  margin-right: 50px;
-	}
   
-  }
   
-  @media(max-width:@mobile){
-	.section1{
-	  display: @direction;
-	  justify-content: space-between;
-	  flex-direction: @orientation;
-	  margin-top: 120px;
-	  margin-left: @size40;
-	
-	}
-  }
   
-  @media(max-width:@mobile){
-	.listen{
-	  display: @direction;
-	 flex-direction: column;
-	 margin: 0 auto;
-	 line-height: 1.5;
-	 font-size: 20px;
-	 margin-right: 35px;
-	}
   
-  }
+ 
   
-  @media (max-width:@mobile){
-	.section2{
-	  display: @direction;
-	  justify-content: space-between;
-	  flex-direction: @orientation;
-	  margin-top: 70px;
-	  margin-left: @size40;
-	  }
   
-  }
   
-  @media(max-width:@mobile){
-	table{
-	  text-align: @location;
-	  margin-top: @size80;
-	  justify-content: @location;
-	  margin-left: -110px;
-	  display: @direction;
-	  flex-wrap: wrap;
-	  
-	}
   
-  }
   
-  @media(max-width:@mobile){
-	.table-row{
-	  border: 1px solid black;
-	 width: @size40;
   
-	}
   
-  }
   
-  @media(max-width:@mobile){
-	th{
-	  font-size: @size10;
-  
-	}
-  
-  }
 
 
