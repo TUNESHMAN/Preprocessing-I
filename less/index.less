@@ -208,11 +208,16 @@ body {
 @cent8: 80%;
 @size1: 1px;
 @gap: space-between;
+@mobile: 500px;
+@size80: 80px;
+@size40: 40px;
+@size15: 15px;
+@orientation: row;
 
 
 nav{
   display: @direction;
-  flex-direction: row;
+  flex-direction: @orientation;
   justify-content: flex-end;
   a{
 	flex-basis: 10%;
@@ -236,7 +241,7 @@ nav a:hover{
   z-index: -1;
   opacity: 0.4;
   background-attachment: fixed;
-  height: 500px;
+  height: @mobile;
   position: absolute;
   background-position: @location;
   justify-content: space-around;
@@ -249,7 +254,7 @@ nav a:hover{
 .pics{
   max-width: 200px;
   margin-left: 90px;
-  margin-top: 80px;
+  margin-top: @size80;
 }
 
 .Babatunde{
@@ -263,7 +268,7 @@ nav a:hover{
   font-size: @size;
   font-weight: @small;
   text-align: @location;
-  margin-top: 15px;
+  margin-top: @size15;
 
 }
 
@@ -287,7 +292,7 @@ nav a:hover{
 
 .section1{
   display: @direction;
-  flex-direction: row;
+  flex-direction: @orientation;
   margin-top: 150px;
   width: @cent8;
   justify-content: @gap;
@@ -312,17 +317,16 @@ h2{
 
 table{
   text-align: @location;
-  margin-top: 15px;
+  margin-top: @size15;
   justify-content: @location;
-  /* width: 80%; */
+ 
 }
 
 th{
   font-size: @size;
   font-weight: @more;
   font-family: Georgia, 'Times New Roman', Times, serif;
-  /* display: flex; */
-  /* justify-content: center; */
+  
   padding-left: @size100;
   padding-top: @size10;
   padding-bottom: @size10;
@@ -331,11 +335,8 @@ th{
 }
 
 .section2{
-  /* display: flex; */
-  /* flex-direction: row; */
+  
   margin-top: @size100;
-  /* width: 80%; */
-  /* justify-content: space-between; */
   margin-left: @size60;
   margin-right: @size30;
 }
@@ -343,9 +344,6 @@ th{
 .table-row{
   border: @size1 solid black;
   width: @cent;
-  /* display: flex; */
-  /* justify-content: space-between; */
-  /* margin-left: 80px; */
  padding-left: 700px;
  align-content: @gap;
 }
@@ -353,8 +351,6 @@ th{
 td{
   font-size: @size;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  /* display: flex; */
-  /* justify-content: center; */
   padding-left: @size100;
   padding-top: @size10;
   padding-bottom: @size10;
@@ -363,14 +359,136 @@ td{
 }
 
 .section3{
-   /* display: flex; */
-  /* flex-direction: row; */
   margin-top: @size100;
-  /* width: 80%; */
-  /* justify-content: space-between; */
   margin-left: @size60;
   margin-right: @size30;
   
 }
+
+
+
+// MOBILE VERSION
+
+@media(max-width:@mobile){
+	nav{
+	  display: @direction;
+	  justify-content: space-around;
+	  }
+	nav a{
+	  font-size: 17px;
+	
+	}
+  }
+  
+  @media (max-width:@mobile){
+	.background{
+	  margin-left: 19px;
+	  width: 600px;
+  
+	}
+  
+  }
+  
+  @media(max-width:@mobile){
+	.pics{
+	  margin-left: 140px;
+	  margin-top: @size40;
+	}
+  
+  }
+  
+  @media(max-width:@mobile){
+	.Babatunde{
+	  font-size: 20px;
+	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	  margin-top: @size10;
+	}
+  
+  }
+  @media(max-width: @mobile){
+	span{
+	  display: none;
+	}
+	
+  }
+  
+  @media(max-width: @mobile){
+	.occ{
+	  font-size: @size15;
+	  padding-right:60px;
+	}
+  
+  }
+  
+  @media(max-width:@mobile){
+	.btn{
+	  margin-right: 50px;
+	}
+  
+  }
+  
+  @media(max-width:@mobile){
+	.section1{
+	  display: @direction;
+	  justify-content: space-between;
+	  flex-direction: @orientation;
+	  margin-top: 120px;
+	  margin-left: @size40;
+	
+	}
+  }
+  
+  @media(max-width:@mobile){
+	.listen{
+	  display: @direction;
+	 flex-direction: column;
+	 margin: 0 auto;
+	 line-height: 1.5;
+	 font-size: 20px;
+	 margin-right: 35px;
+	}
+  
+  }
+  
+  @media (max-width:@mobile){
+	.section2{
+	  display: @direction;
+	  justify-content: space-between;
+	  flex-direction: row;
+	  margin-top: 70px;
+	  margin-left: @size40;
+	  }
+  
+  }
+  
+  @media(max-width:@mobile){
+	table{
+	  text-align: @location;
+	  margin-top: @size80;
+	  justify-content: @location;
+	  margin-left: -110px;
+	  display: @direction;
+	  flex-wrap: wrap;
+	  
+	}
+  
+  }
+  
+  @media(max-width:@mobile){
+	.table-row{
+	  border: 1px solid black;
+	 width: @size40;
+  
+	}
+  
+  }
+  
+  @media(max-width:@mobile){
+	th{
+	  font-size: @size10;
+  
+	}
+  
+  }
 
 
