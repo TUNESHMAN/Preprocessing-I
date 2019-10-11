@@ -20,7 +20,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
+	font-size: @cent;
 	font: inherit;
 	vertical-align: baseline;
 }
@@ -54,6 +54,448 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: @cent;
 }
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: @cent;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: @cent;
+}
+
+// VARIABLES
+@bg-color:  teal;
+@size: 20px;
+@size10: 10px;
+@size30: 30px;
+@direction: flex;
+@location: center;
+@size60: 60px;
+@size100: 100px;
+@cent: 100%;
+@small: bold;
+@more: bolder;
+@cent8: 80%;
+@size1: 1px;
+@gap: space-between;
+@mobile: 500px;
+@size80: 80px;
+@size40: 40px;
+@size15: 15px;
+@orientation: row;
+@colour: blue;
+
+// MIXINS
+.anchor{
+	font-size: @size;
+	color: @colour;
+}
+
+.free{
+	display: @direction;
+	flex-direction: @orientation ;
+}
+
+
+nav{
+  display: @direction;
+  flex-direction: @orientation;
+  justify-content: flex-end;
+
+  @media (max-width:@mobile) {
+	 display: @direction;
+	  justify-content: space-around;
+	  }
+	
+	}
+  a{
+	flex-basis: 10%;
+	justify-content: @gap;
+	text-decoration: none;
+	.anchor();
+
+	@media(max-width:@mobile){
+	 font-size: 17px;
+	}
+}
+  
+
+
+nav a:hover{
+  cursor: pointer;
+  color: orange;
+}
+
+.background{
+  background-color: @bg-color;
+  width: 90%;
+  background-repeat: no-repeat;
+  background-size: auto;
+  z-index: -1;
+  opacity: 0.4;
+  background-attachment: fixed;
+  height: @mobile;
+  position: absolute;
+  background-position: @location;
+  justify-content: space-around;
+  display: @direction;
+  margin-left: @size60;
+  margin-top: @size;
+
+  @media (max-width:@mobile){
+	 margin-left: 19px;
+	  width: 600px;
+	}
+  
+  }
+
+.pics{
+  max-width: 200px;
+  margin-left: 90px;
+  margin-top: @size80;
+
+  @media(max-width:@mobile){
+	  margin-left: 140px;
+	  margin-top: @size40;
+	}
+  
+  }
+
+
+.Babatunde{
+  font-size: @size30;
+  font-weight: @more;
+  text-align: @location;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  @media(max-width:@mobile){
+	  font-size: 20px;
+	  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+	  margin-top: @size10;
+	}
+  
+  }
+
+.jam{
+  font-size: @size;
+  font-weight: @small;
+  text-align: @location;
+  margin-top: @size15;
+
+}
+
+.btn{
+  display: inline-block;
+  border: @size1 solid black;
+  padding:@size10 12px;
+  background-color: gray;
+  font-weight: @small;
+  font-size: @size;
+  margin-top: @size;
+
+  @media(max-width:@mobile){
+	  margin-right: 50px;
+	}
+  
+  }
+
+
+.description{
+  margin-left: @size60;
+  text-align: @location;
+  margin-top: @size;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+} 
+
+.section1{
+  .free();
+  margin-top: 150px;
+  width: @cent8;
+  justify-content: @gap;
+
+  @media(max-width:@mobile){
+	  display: @direction;
+	  justify-content: space-between;
+	  flex-direction: @orientation;
+	  margin-top: 120px;
+	  margin-left: @size40;
+	
+	}
+  }
+
+
+h2{
+  font-size: 25px;
+  font-weight: @more;
+}
+
+.listen{
+  display: @direction;
+  flex-direction: column;
+  margin: 0 auto;
+  line-height: 1.5;
+  font-size: @size;
+
+  @media(max-width:@mobile){
+	
+	 display: @direction;
+	 flex-direction: column;
+	 margin: 0 auto;
+	 line-height: 1.5;
+	 font-size: 20px;
+	 margin-right: 35px;
+	}
+  
+  }
+
+.stuff{
+  line-height: 1.5;
+  font-size: @size;
+}
+
+table{
+  text-align: @location;
+  margin-top: @size15;
+  justify-content: @location;
+
+  @media(max-width:@mobile){
+	
+	  text-align: @location;
+	  margin-top: @size80;
+	  justify-content: @location;
+	  margin-left: -110px;
+	  display: @direction;
+	  flex-wrap: wrap;
+	  
+	}
+  
+  }
+ 
+
+th{
+  font-size: @size;
+  font-weight: @more;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  
+  padding-left: @size100;
+  padding-top: @size10;
+  padding-bottom: @size10;
+  background:@bg-color;
+
+  @media(max-width:@mobile){
+
+	  font-size: @size15;
+  
+	}
+  
+  }
+
+.section2{
+  
+  margin-top: @size100;
+  margin-left: @size60;
+  margin-right: @size30;
+
+  @media (max-width:@mobile){
+	  display: @direction;
+	  justify-content: space-between;
+	  flex-direction: @orientation;
+	  margin-top: 70px;
+	  margin-left: @size40;
+	  }
+  
+  }
+
+
+.table-row{
+  border: @size1 solid black;
+  width: @cent;
+ padding-left: 700px;
+ align-content: @gap;
+
+ @media(max-width:@mobile){
+	  border: 1px solid black;
+	 width: @size40;
+  
+	}
+  
+  }
+
+
+td{
+  font-size: @size;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  padding-left: @size100;
+  padding-top: @size10;
+  padding-bottom: @size10;
+  background: peachpuff;
+
+}
+
+.section3{
+  margin-top: @size100;
+  margin-left: @size60;
+  margin-right: @size30;
+  
+}
+
+  @media(max-width: @mobile){
+	span{
+	  display: none;
+	}
+	
+  }
+  
+  @media(max-width: @mobile){
+	.occ{
+	  font-size: @size15;
+	  padding-right:60px;
+	}
+  
+  }
+  
+  
+  
+  
+  
+ 
+  
+  
+  
+  
+  
+  
+  
+  
+
 
